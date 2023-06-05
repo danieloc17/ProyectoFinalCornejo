@@ -1,0 +1,23 @@
+.divItem {
+    align-items: center;
+    background-color: #141C29;
+    border-radius: 10px;
+    color: white;
+    margin: 1.5rem;
+    padding-bottom: 2rem;
+    width: 15rem;
+}
+
+.imgItem {
+    border-radius: 10px 10px 0 0;
+    height: 15rem;
+    width: 15rem;
+}
+
+.linkItem {
+    background-color: darkgoldenrod;
+    border-radius: 15px;    
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}

@@ -1,0 +1,26 @@
+.divCartWidget {
+    display: inline-block;
+    height: 100px;
+    position: relative;
+    width: 150px;
+}
+
+.imgCartWidget {
+    height: 60px;
+    margin: 20px;
+    width: 65px;    
+}
+
+span {
+    background-color: #be1d11;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    height: 25px;
+    left: 80px;
+    padding-top: 0.5rem;
+    position: absolute;
+    top: 15px;
+    width: 30px;
+}

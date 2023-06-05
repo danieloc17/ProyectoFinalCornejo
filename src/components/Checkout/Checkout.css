@@ -1,0 +1,43 @@
+.divCheckoutProducts {
+    background-color: #141C29;
+    border: 1px solid darkgoldenrod;
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto 1rem;
+    padding-left: 2rem;
+    text-align: left;
+    width: 30rem;
+}
+
+form {
+    background-color: #141C29;
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto 2rem;
+    padding: 1rem 2rem;
+    text-align: left;
+    width: 28rem;
+}
+
+form p {
+    color: darkgoldenrod;    
+    font-weight: bold;
+}
+
+label {
+    color: darkgoldenrod;
+    display: block;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    width: 27rem;
+}
+
+.btnFinishOrder {
+    border-radius: 15px;
+    font-size: 1rem;
+    margin: 0.5rem 9rem;
+    padding: 0.5rem 1rem;
+}

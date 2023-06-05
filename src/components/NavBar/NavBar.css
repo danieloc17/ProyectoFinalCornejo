@@ -1,0 +1,24 @@
+header {
+    align-items: center;
+    background-color: #141C29;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+}
+
+#imgLogo {
+    height: 100px;
+    width: 95px;
+}
+
+li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+li * {
+    color: darkgoldenrod;
+    text-decoration: none;    
+}

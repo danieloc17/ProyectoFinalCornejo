@@ -1,0 +1,32 @@
+.divCart {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;    
+    margin: 1rem 10% 2rem;
+    width: 80%;
+}
+
+.divCartFooter {
+    background-color: #141C29;
+    border-radius: 10px;    
+    color: white;
+    margin: auto;
+    padding: 0.5rem 0 2rem;
+    width: 20rem;
+}
+
+.btnClearCart {
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.linkToCheckout, .linkToHome {
+    background-color: darkgoldenrod;
+    border-radius: 15px;    
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
