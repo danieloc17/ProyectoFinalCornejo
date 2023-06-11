@@ -64,14 +64,28 @@ const Checkout = () => {
   return (
     <div>
       <h1>Checkout</h1>
-      <div className="divCheckoutProducts">
-        {cart.map(product => (
-          <div key={product.item.id}>
-            <p> - {product.item.name} x {product.quantity} - Precio: $ {product.item.price} </p>
-          </div>
-        ))}
-      </div>
+      {
+        total > 0 ? (
+          <>
+            <div className="divCheckoutProducts">
+              <p><u>Productos:</u></p>
+              {cart.map(product => (
+                <div key={product.item.id}>
+                  <p> ~ {product.item.name} - Precio: $ {product.item.price} - Cantidad: {product.quantity} - Subtotal: $ {product.item.price * product.quantity} </p>
+                </div>
+              ))}
+            </div>
+            <div className="divCheckoutTotal">
+              <h2> Total: $ {total} </h2>
+            </div>
+          </>
+        ) : (
+          <></>
+        )
+      }
       <form onSubmit={submitHandler}>
+        <label><u>Datos del Cliente:</u></label>
+        <br />
         <div>
           <label htmlFor=""> Nombre: </label>
           <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

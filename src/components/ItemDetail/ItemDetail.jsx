@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 import { CartContext } from "../../context/cartContext";
 import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({ id, name, description, price, stock, category, img }) => {
+const ItemDetail = ({ id, name, description, price, stock, img, addedQuantity }) => {
   const [quantity, setQuantity] = useState(0);
 
-  const { totalQuantity, addItem } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
 
   const quantityHandler = (quantity) => {
     setQuantity(quantity);
@@ -15,6 +15,14 @@ const ItemDetail = ({ id, name, description, price, stock, category, img }) => {
     const item = { id, name, price };
     addItem(item, quantity);
   }
+
+  if (name === undefined) {
+    return (
+        <>
+            <h1> El producto con ID {id} no existe </h1>
+        </>
+    )
+}  
 
   return (
     <>
@@ -33,7 +41,7 @@ const ItemDetail = ({ id, name, description, price, stock, category, img }) => {
             <Link className="linkItemDetail" to="/cart"> Ver Carrito </Link>
           </div>
         ) : (
-          <ItemCount initialValue={1} stock={stock} functionAddItem={quantityHandler} />
+          <ItemCount initialValue={ addedQuantity > 0 ? addedQuantity : 1 } addedQuantity={addedQuantity} stock={stock} functionAddItem={quantityHandler} />
         )
       }
     </>

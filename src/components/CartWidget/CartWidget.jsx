@@ -6,7 +6,7 @@ import { CartContext } from "../../context/cartContext";
 const CartWidget = () => {
     const { totalQuantity } = useContext(CartContext);
 
-    const imgCart = "../img/cart.jpg";
+    const imgCart = "/img/cart.jpg";
     return (
         <Link to="/cart">
             <div className="divCartWidget">

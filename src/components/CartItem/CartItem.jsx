@@ -8,8 +8,9 @@ const CartItem = ({item, quantity}) => {
   return (
     <div className="divCartItem">
       <h2> {item.name} </h2>
-      <h3> Cantidad: {quantity} </h3>
       <h3> Precio: $ {item.price} </h3>
+      <h3> Cantidad: {quantity} </h3>
+      <h3> Subtotal: $ {quantity * item.price} </h3>
       <button className="btnDelete" onClick={() => deleteItem(item.id)}> Eliminar </button>
     </div>
   )

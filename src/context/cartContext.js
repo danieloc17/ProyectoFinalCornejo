@@ -12,18 +12,15 @@ export const CartProvider = ({ children }) => {
     const [total, setTotal] = useState(0);
 
     const addItem = (item, quantity) => {
-        if (!isInCart(item.id)) {
-            setCart(prev => [...prev, { item, quantity }]);
-            setTotalQuantity(prev => prev + quantity);
-            setTotal(prev => prev + (item.price * quantity));             
-        }
-        else {
-            console.log("El producto ya está agregado!!!")
-        }        
-    }
+        const addedProduct = cart.find(prod => prod.item.id === item.id);
 
-    const isInCart = (id) => {
-        return cart.some(prod => prod.item.id === id);
+        if (addedProduct !== undefined) {
+            deleteItem(item.id);
+        }
+
+        setCart(prev => [...prev, { item, quantity }]);
+        setTotalQuantity(prev => prev + quantity);
+        setTotal(prev => prev + (item.price * quantity));        
     }
 
     const deleteItem = (id) => {

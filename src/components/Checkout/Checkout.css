@@ -6,7 +6,16 @@
     margin: 0 auto 1rem;
     padding-left: 2rem;
     text-align: left;
-    width: 30rem;
+    width: 35rem;
+}
+
+.divCheckoutTotal {
+    background-color: #141C29;
+    border: 1px solid darkgoldenrod;
+    border-radius: 10px;
+    color: white;
+    margin: 0 auto 1rem;
+    width: 20rem;
 }
 
 form {
